@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical" android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:paddingLeft="10px"
+  android:paddingRight="10px"
+  >
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_marginTop="10px"
+			android:text="内容：" />
+		<EditText android:id="@+id/detail_edittext" 
+		  	android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			/>
+		
+		 <TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_marginTop="5px"
+			android:text="设置日期" />
+	 
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_marginTop="15px"
+			android:text="设置时间类型：" />
+	<Spinner 
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/choice"
+    />
+	<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_marginTop="15px"
+			android:text="请选择分类：" />
+	 <Button 
+        android:id="@+id/category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="点击选择"
+    />
+	
+	
+	<Button 
+		android:id="@+id/confirm" 
+	  	android:text="确认"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_gravity="center_horizontal"
+		/>
+  
+</LinearLayout>
+ </ScrollView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="10px"
+    android:paddingRight="10px"
+    android:paddingTop="5px"
+    android:paddingBottom="5px"
+    >
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+  <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     android:layout_gravity="left"
+     android:text="任务内容："
+    android:textSize="18px"
+
+    />
+<TextView android:id="@+id/past_title" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="18px"
+ />
+ </LinearLayout>
+ <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     android:layout_gravity="left"
+     android:text="开始时间："
+    android:textSize="12px"
+
+    />
+ <TextView android:id="@+id/past_start_time" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="12px"
+ />
+ <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:layout_marginLeft="15px"
+     android:text="用时："
+    android:textSize="12px"
+ />
+ <TextView android:id="@+id/past_time_consume" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="12px"
+ />
+ <TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     android:layout_marginLeft="15px"
+     android:text="类别："
+    android:textSize="12px"
+ />
+ <TextView android:id="@+id/past_kind" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="12px"
+ />
+  </LinearLayout>
+ </LinearLayout>

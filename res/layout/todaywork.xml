@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#FFFFFF">
+<LinearLayout
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="60dp"
+  android:background="#DEDEDE">
+  <TextView 
+      android:id="@+id/titleFuck"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:textColor="#000000"
+      android:textSize="30sp"
+      android:layout_gravity="center_vertical"
+      android:text="Strange Life"/>
+  	
+    <Button 
+        android:id="@+id/addItemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/add_new_item"
+        />
+    <Button 
+        android:id="@+id/view_past_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/view_past"
+        />
+  </LinearLayout>
+<ExpandableListView
+android:id="@+id/expandlistview"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:childDivider="@android:color/transparent">
+</ExpandableListView>
+  
+</LinearLayout>

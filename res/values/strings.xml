@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, HelloStrangeLifeActivity!</string>
+    <string name="app_name">StrangeLife</string>
+    <string name="choice">设置时间类型</string>
+
+    <string-array name="choice_array">
+        <item>当天</item>
+        <item>每天</item>
+    </string-array>
+    
+    <color name="gray">#999999</color>
+    <color name="blue">#0000ff</color>
+    <color name="red">#ff0000</color>
+    
+</resources>

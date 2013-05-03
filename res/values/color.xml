@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="green">#00ff00</color>
+    <color name="holo_blue_lighter">#4a9ebd</color>
+    <color name="holo_green_lighter">#73ae6b</color>
+    <color name="holo_blue_darker">#397da5</color>    
+    <color name = "flat_blue">#14b9d6</color>
+    <color name = "flat_red">#ec7063</color>
+    <color name = "flat_green">#148d75</color>
+    <color name = "flat_gray">#323a45</color>
+    <color name = "flat_white">#ffffff</color>
+    <color name = "flat_brown">#f27935</color>
+    <color name = "flat_purple">#8e44ad</color>
+</resources>
