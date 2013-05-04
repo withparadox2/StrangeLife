@@ -33,6 +33,7 @@ public class WorkOfToday extends Activity{
 	private List<Integer> flag_list = new ArrayList<Integer>();
 	private List<Long> id_list = new ArrayList<Long>();
 	
+	private Typeface typeFace;
 	
 	private NotesDbAdapter mDbHelper;
 	private ExpandableListView expandableListView;
@@ -65,8 +66,8 @@ public class WorkOfToday extends Activity{
         myThread.start();
         
         titleName = (TextView)findViewById(R.id.titleFuck);
-    	Typeface face=Typeface.createFromAsset(getAssets(), "font/DinDisplayProThin.otf");
-		titleName.setTypeface(face);
+    	typeFace = Typeface.createFromAsset(getAssets(), "font/DinDisplayProThin.otf");
+		titleName.setTypeface(typeFace);
         addItemButton = (Button)findViewById(R.id.addItemButton);
         viewPastButton = (Button)findViewById(R.id.view_past_button);
         addItemButton.setOnClickListener(new OnClickListener() {

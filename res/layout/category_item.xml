@@ -6,7 +6,8 @@
 <TextView 
     android:id="@+id/first_category_text"
     android:layout_width="match_parent"
-    android:layout_height="20dp"/>
+    android:textSize="18sp"
+    android:layout_height="25dp"/>
 <com.withparadox2.strangelife.custom.CustomViewGroup
     android:id="@+id/second_viewgroup"
     android:layout_height="wrap_content"

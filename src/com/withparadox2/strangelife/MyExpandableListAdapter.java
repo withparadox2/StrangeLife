@@ -108,8 +108,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter implement
             viewHolder.categoty_edit_button = (Button)convertView.findViewById(R.id.categoty_edit);
             viewHolder.start_time_edit_button = (Button)convertView.findViewById(R.id.start_time_edit);
             viewHolder.detail_edit_button = (Button)convertView.findViewById(R.id.detail_edit);
-            viewHolder.detailText = (TextView)convertView.findViewById(R.id.categoryText);
-            viewHolder.timeText = (TextView)convertView.findViewById(R.id.timeText);
+            viewHolder.detailText = (TextView)convertView.findViewById(R.id.child_detail_text);
             convertView.setTag(viewHolder);
         }else{
         	viewHolder = (ChildViewHolder)convertView.getTag();
@@ -117,10 +116,8 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter implement
 
 		final String[] item = mDbHelper.fetchItemByIdInAllNotes(id_list.get(groupPosition));
 		 viewHolder.detailText.setTypeface(face);
-		 viewHolder.timeText.setTypeface(face);
 		 
 		 viewHolder.detailText.setText("Detail:"+ item[0]);
-		 viewHolder.timeText.setText("Time:" + getChildTimeDisplay(groupPosition));
 		 viewHolder.categoty_edit_button.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -186,7 +183,8 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter implement
 	public class GroupViewHolder{
 		public Button workButton;
 		public Button deleteButton;
-		public TextView titleText;
+		public TextView categoryText;
+		public TextView timeText;
 	}
 
 	@Override
@@ -206,14 +204,17 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter implement
             viewHolder = new GroupViewHolder();
             viewHolder.workButton = (Button)convertView.findViewById(R.id.myButton);
             viewHolder.deleteButton = (Button)convertView.findViewById(R.id.deteleItemButton);
-            viewHolder.titleText = (TextView)convertView.findViewById(R.id.myText);
+            viewHolder.categoryText = (TextView)convertView.findViewById(R.id.group_category_text);
+            viewHolder.timeText = (TextView)convertView.findViewById(R.id.group_time_text);
             convertView.setTag(viewHolder);
         }else{
         	viewHolder = (GroupViewHolder)convertView.getTag();
         }
 		holder = viewHolder;
-		holder.titleText.setText(category_list.get(groupPosition));
-		
+		holder.timeText.setTypeface(face);
+		holder.categoryText.setTypeface(face);
+		holder.categoryText.setText(category_list.get(groupPosition));
+		holder.timeText.setText(getTimeDisplayString(selectPos));
 		holder.workButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
@@ -312,10 +313,8 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter implement
 		});
 
 		if(flag[selectPos]==true){
-			viewHolder.titleText.setTextColor(Color.parseColor("#FF0099"));
 			holder.workButton.setBackgroundResource(R.drawable.item_over);
 		}else{
-			viewHolder.titleText.setTextColor(Color.parseColor("#000000"));
 			holder.workButton.setBackgroundResource(R.drawable.item_start);
 		} 
 		return convertView;
@@ -391,7 +390,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter implement
      	dialog.show();
 	    }
 	 
-	 private String getChildTimeDisplay(int position){
+	 private String getTimeDisplayString(int position){
 		 Cursor c  = mDbHelper.fetchSingleCursorById(id_list.get(position));
 		 c.moveToFirst();
 		 String oldDate = c.getString(c.getColumnIndex(NotesDbAdapter.KEY_NOTE_DATE));
@@ -409,7 +408,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter implement
 		 if(flag[position] == false){
 			 return "Not Start!";
 		 }else{
-			return " " +total/60+" h "+total%60+" m";
+			return "" +total/60+" 小时 " + total % 60 + " 分钟";
 		 }
 		
 	 }

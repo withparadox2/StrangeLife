@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +50,9 @@ public class CategoryActivity extends Activity{
 		mCHelper = new CategoryHelper(this);
 		mCHelper.open();
 		getAllMotherCategory();
+		
+		TextView v = (TextView)findViewById(R.id.titleFuck);
+		v.setTypeface(Typeface.createFromAsset(getAssets(), "font/DinDisplayProThin.otf"));
 		myListView = (ListView) findViewById(R.id.category_listview);
 		myAdapter = new MyAdapter(this, R.layout.category_item);
 		myListView.setAdapter(myAdapter);
