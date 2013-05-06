@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="120dp"
+    android:background="@drawable/poput_window_shape_bg"
+    android:orientation="vertical" >
+    <Button 
+        android:id="@+id/pupup_year_button"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:textColor="@color/flat_white"
+        android:text="年"/>
+    <Button 
+        android:id="@+id/popup_month_button"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:textColor="@color/flat_white"
+        android:text="月"/>
+    <Button 
+        android:id="@+id/popup_day_button"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:textColor="@color/flat_white"
+        android:text="日"/>
+
+</LinearLayout>

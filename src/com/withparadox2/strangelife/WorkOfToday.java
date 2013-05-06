@@ -90,7 +90,7 @@ public class WorkOfToday extends Activity{
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent i = new Intent();
-				i.setClass(WorkOfToday.this, DateWidget.class);
+				i.setClass(WorkOfToday.this, StrangeLifeViewActivity.class);
 				startActivity(i);
 			}
 		});

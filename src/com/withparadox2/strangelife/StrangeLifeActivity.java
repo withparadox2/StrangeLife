@@ -36,13 +36,13 @@ public class StrangeLifeActivity extends Activity implements OnClickListener{
 	
 	private void enterWorkOfToday(){
 		Intent intent = new Intent();
-		intent.setClass(StrangeLifeActivity.this,WorkOfToday.class);
+		intent.setClass(StrangeLifeActivity.this, WorkOfToday.class);
 		startActivity(intent);
 	}
 	
 	private void enterCalendar(){
 		Intent intent = new Intent();
-		intent.setClass(StrangeLifeActivity.this,DateWidget.class);
+		intent.setClass(StrangeLifeActivity.this, StrangeLifeViewActivity.class);
 		startActivity(intent);
 	}
 	

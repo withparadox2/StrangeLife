@@ -53,46 +53,54 @@ public final class R {
         public static final int login_button_shape_pressed=0x7f020012;
         public static final int middle_button_shape_normal=0x7f020013;
         public static final int middle_button_shape_pressed=0x7f020014;
-        public static final int right_button_shape_normal=0x7f020015;
-        public static final int right_button_shape_pressed=0x7f020016;
-        public static final int start_time_edit=0x7f020017;
-        public static final int view_past=0x7f020018;
+        public static final int nav_previous=0x7f020015;
+        public static final int poput_window_shape_bg=0x7f020016;
+        public static final int right_button_shape_normal=0x7f020017;
+        public static final int right_button_shape_pressed=0x7f020018;
+        public static final int start_time_edit=0x7f020019;
+        public static final int view_past=0x7f02001a;
     }
     public static final class id {
-        public static final int addItemButton=0x7f07001c;
+        public static final int addItemButton=0x7f07001f;
         public static final int add_mother_item_button=0x7f070001;
+        public static final int back_button=0x7f070017;
         public static final int buttonOfEnterPast=0x7f070011;
         public static final int buttonOfEnterToday=0x7f070010;
         public static final int buttonOfExit=0x7f070012;
-        public static final int category=0x7f070020;
+        public static final int category=0x7f070023;
         public static final int category_listview=0x7f070002;
         public static final int categoty_edit=0x7f070008;
         public static final int child_detail_text=0x7f070007;
-        public static final int confirm=0x7f070021;
+        public static final int confirm=0x7f070024;
+        public static final int date_textview=0x7f070018;
         public static final int detail_edit=0x7f07000a;
-        public static final int detail_edittext=0x7f07001e;
+        public static final int detail_edittext=0x7f070021;
         public static final int deteleItemButton=0x7f07000e;
         public static final int dynamic_listview=0x7f070005;
         public static final int dynamic_listview_text=0x7f070006;
-        public static final int expandlistview=0x7f07001d;
+        public static final int expandlistview=0x7f070020;
         public static final int first_category_text=0x7f070003;
-        public static final int frame_layout=0x7f07001a;
+        public static final int frame_layout=0x7f07001d;
         public static final int group_category_text=0x7f07000c;
         public static final int group_time_text=0x7f07000d;
-        public static final int left_button=0x7f070017;
-        public static final int middle_button=0x7f070018;
+        public static final int left_button=0x7f07001a;
+        public static final int middle_button=0x7f07001b;
         public static final int myButton=0x7f07000b;
         public static final int myText=0x7f07000f;
         public static final int past_kind=0x7f070016;
         public static final int past_start_time=0x7f070014;
         public static final int past_time_consume=0x7f070015;
         public static final int past_title=0x7f070013;
-        public static final int right_button=0x7f070019;
+        public static final int popup_day_button=0x7f070027;
+        public static final int popup_month_button=0x7f070026;
+        public static final int pupup_year_button=0x7f070025;
+        public static final int right_button=0x7f07001c;
         public static final int second_viewgroup=0x7f070004;
-        public static final int spinner=0x7f07001f;
+        public static final int spinner=0x7f070022;
         public static final int start_time_edit=0x7f070009;
         public static final int titleFuck=0x7f070000;
-        public static final int view_past_button=0x7f07001b;
+        public static final int view_past_button=0x7f07001e;
+        public static final int which_kind_textview=0x7f070019;
     }
     public static final class layout {
         public static final int category=0x7f030000;
@@ -107,6 +115,7 @@ public final class R {
         public static final int past_work=0x7f030009;
         public static final int todaywork=0x7f03000a;
         public static final int todoedit=0x7f03000b;
+        public static final int which_kind_popup=0x7f03000c;
     }
     public static final class string {
         public static final int app_name=0x7f050001;

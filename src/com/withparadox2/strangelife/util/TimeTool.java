@@ -1,8 +1,14 @@
 ﻿package com.withparadox2.strangelife.util;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.withparadox2.strangelife.NotStaticConstant;
+
+import android.text.format.DateFormat;
 
 public class TimeTool {
     private int mDay;
@@ -38,9 +44,24 @@ public class TimeTool {
         mSecond = c.get(Calendar.SECOND);
 	}
 	
+	public String getDateForamt(){
+		setTime();
+		return mYear + "-" + 
+	       (mMonth < 10 ? "0" + mMonth : "" + mMonth) + "-" + 
+	       (mDay < 10 ? "0" + mDay : "" + mDay);
+	}
+	
 	public String getDate(){
 		setTime();
-		return mYear+"-"+mMonth + "-"+mDay;
+		return mYear + "-" + mMonth  + "-" + mDay;
+	}
+	
+	public String getDateText(){
+		setTime();
+		
+		return mYear + "年" + 
+		       (mMonth < 10 ? "0" + mMonth : "" + mMonth) + "月" + 
+		       (mDay < 10 ? "0" + mDay : "" + mDay) + "日";
 	}
 	
 	public String getYear(){
@@ -56,4 +77,22 @@ public class TimeTool {
 		c = Calendar.getInstance();
 		return c.get(Calendar.MINUTE);
 	}
+
+	public String getNextOrPreDate(String pattern, String date, int preOrNext){
+		System.out.println("-------"+date);
+		c = Calendar.getInstance();
+		SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+		try {
+			c.setTime(dateFormat.parse(date));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("-------"+c.getTime());
+		c.add(Calendar.DATE, preOrNext);
+		NotStaticConstant.DATE = c.get(Calendar.YEAR) + "-" + (c.get(Calendar.MONTH) + 1) + "-" + c.get(Calendar.DAY_OF_MONTH);
+		System.out.println(NotStaticConstant.DATE);
+		return dateFormat.format(c.getTime());
+	}
+	
 }

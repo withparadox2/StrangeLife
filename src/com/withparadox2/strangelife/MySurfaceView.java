@@ -176,5 +176,12 @@ public class MySurfaceView extends View{
 		    		return totalTime/60+"h"+totalTime%60+"m";
 		    	}
 		    }
+		    
+		    
+		    public void updateData(){
+		    	date = NotStaticConstant.DATE;
+		    	myList.clear();
+		    	getAllNotes();
+		    }
     	
     }

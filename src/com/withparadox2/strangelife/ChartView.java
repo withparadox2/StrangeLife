@@ -11,6 +11,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.withparadox2.strangelife.dao.CategoryHelper;
@@ -21,7 +22,6 @@ public class ChartView extends View{
 	private NotesDbAdapter mDbHelper;
 	private List<String> categoryList = new ArrayList<String>();
 	private List<Integer> timeConsumeList = new ArrayList<Integer>();
-	private Map<String, Integer> timeConsumeMap = new HashMap<String, Integer>();
 	private List<Integer> colorList = new ArrayList<Integer>(); 
 	private Context context;
 
@@ -148,6 +148,16 @@ public class ChartView extends View{
     	ms = m < 10 ? "0" + m : "" + m;
     	hs = h < 10 ? "0" + h : "" + h;
     	return hs + " h  " + ms + " m";
+    }
+    
+    public void updateData(){
+    	categoryList.clear();
+    	timeConsumeList.clear();
+    	colorList.clear();
+    	getCategoryList();
+		getTimeConsume();
+		getColorList();
+    	Log.i("ChartView", "called in updateData() the timeConsume is " + timeConsumeList);
     }
 	
 	
